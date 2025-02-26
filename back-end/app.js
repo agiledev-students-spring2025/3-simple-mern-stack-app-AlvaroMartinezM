@@ -78,5 +78,15 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// Example: In app.js
+app.get('/api/about', (req, res) => {
+  res.json({
+    name: "Alvaro Martinez", 
+    bio: "Hello, I'm Alvaro, a passionate software developer with a strong background in full-stack web development. I began my journey in technology during high school and quickly discovered a love for solving problems through code. Over the years, I’ve honed my skills in JavaScript and modern web frameworks, which has led me to specialize in the MERN stack. Whether it's building responsive interfaces or designing robust back-end systems, I enjoy every aspect of creating functional, user-friendly applications.\n\nOutside of coding, I have a deep interest in exploring new technologies and contributing to open-source projects. I believe that sharing knowledge and collaborating with fellow developers is key to innovation and growth in our field. In my free time, I love reading about emerging trends in tech, experimenting with new programming tools, and continuously learning to stay on the cutting edge of the industry.\n\nWhen I'm not immersed in code, you can find me enjoying outdoor activities like hiking, biking, or simply exploring nature. I also have a creative side that I express through photography and writing, which helps me find a balance between my technical work and personal passions. I'm excited to share my journey and expertise, and I look forward to the opportunities that lie ahead.",
+    image: "/profile.jpeg"
+  });
+});
+
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
